@@ -41,6 +41,8 @@ function showNotes() {
     }
 
     notesAr.forEach(function (element, index) {
+        if(element.title!="")
+        {
         html += `
         <div class="noteCrd my-2 card mx-2" style="width: 18rem;">
             <div class="card-body">
@@ -50,6 +52,7 @@ function showNotes() {
               <button id=Imp_${index} onclick="markNote(this.id)" class="btn btn-primary">Mark Note</button>
             </div>
           </div>`;
+        }
     });
 
 
